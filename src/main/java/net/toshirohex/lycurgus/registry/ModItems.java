@@ -54,8 +54,7 @@ public class ModItems {
     public static final Pickaxe STEEL_TOOL = new Pickaxe(KNIGHT, +2, +1.0F, new Item.Settings().group(ITEM_GROUP));
     public static final ShovelItem HANDS_COLD_TOOL = new ShovelItem(KNIGHT, +1, +1.0F, new Item.Settings().group(ITEM_GROUP));
     public static final Axe ENDIUM_TOOL = new Axe(KNIGHT, +5, -0.5F, new Item.Settings().group(ITEM_GROUP));
-    public static final Hoe SXBLACKWOLF = new Hoe(ToolMaterials.WOOD,+0, +0.0F, new Item.Settings().group(ITEM_GROUP)); //this is an inside joke, dm Boboluto#2556 on discord if you want context.  I have zero plans of adding this into thc registry.
-    public static final Hoe PIXELZERAORA = new Hoe(ToolMaterials.WOOD, -100, -100.0F, new Item.Settings().group(ITEM_GROUP));
+    public static final Hoe PIXELZERAORA = new Hoe(ToolMaterials.WOOD, -100, -100.0F, new Item.Settings().group(ITEM_GROUP)); //don't question
 
     //Block Items
     public static final BlockItem STEEL_ORE = new BlockItem(ModBlocks.STEEL_ORE, new Item.Settings().group(ITEM_GROUP));
@@ -72,32 +71,32 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toe"), TOE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toest"), TOEST);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_ingot"), STEEL_INGOT);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_ingot"), STEEL_INGOT);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_sword"), STEEL_SWORD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_pickaxe"), STEEL_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_shovel"), STEEL_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_axe"), STEEL_AXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_hoe"), STEEL_HOE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_axe"), STEEL_AXE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_hoe"), STEEL_HOE);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_ingot"), HANDS_COLD_INGOT);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_ingot"), HANDS_COLD_INGOT);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_sword"), HANDS_COLD_SWORD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_pickaxe"), HANDS_COLD_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_shovel"), HANDS_COLD_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_axe"), HANDS_COLD_AXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_hoe"), HANDS_COLD_HOE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_axe"), HANDS_COLD_AXE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_hoe"), HANDS_COLD_HOE);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_ingot"), ENDIUM_INGOT);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_ingot"), ENDIUM_INGOT);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_sword"), ENDIUM_SWORD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_pickaxe"), ENDIUM_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_shovel"), ENDIUM_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_axe"), ENDIUM_AXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_hoe"), ENDIUM_HOE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_axe"), ENDIUM_AXE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_hoe"), ENDIUM_HOE);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_ingot"), GREATSWORD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_sword"), KNIGHTLY_KATANA);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_pickaxe"), STEEL_TOOL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_shovel"), HANDS_COLD_TOOL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_axe"), ENDIUM_TOOL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "greatsword"), GREATSWORD);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knightly_katana"), KNIGHTLY_KATANA);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_tool"), STEEL_TOOL);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_tool"), HANDS_COLD_TOOL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_tool"), ENDIUM_TOOL);
 
 
         //Block Items
