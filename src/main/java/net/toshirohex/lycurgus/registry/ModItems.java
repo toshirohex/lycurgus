@@ -1,7 +1,5 @@
 package net.toshirohex.lycurgus.registry;
 
-import jdk.nashorn.internal.ir.Block;
-import net.minecraft.block.Material;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;

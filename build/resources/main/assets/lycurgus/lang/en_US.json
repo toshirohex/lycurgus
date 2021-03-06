@@ -1,8 +1,35 @@
 {
   "item.lycurgus.toe": "Toe",
+  "item.lycurgus.toest": "Toest",
 
+  "item.lycurgus.steel_sword": "Steel Sword",
+  "item.lycurgus.steel_shovel": "Steel Shovel",
+  "item.lycurgus.steel_pickaxe": "Steel Pickaxe",
+  "item.lycurgus.steel_axe": "Steel Axe",
+  "item.lycurgus.steel_hoe": "Steel Hoe",
 
+  "item.lycurgus.hands_cold_sword": "Hands Cold Sword",
+  "item.lycurgus.hands_cold_shovel": "Hands Cold Shovel",
+  "item.lycurgus.hands_cold_pickaxe": "Hands Cold Pickaxe",
+  "item.lycurgus.hands_cold_axe": "Hands Cold Axe",
+  "item.lycurgus.hands_cold_hoe": "Hands Cold Hoe",
+
+  "item.lycurgus.endium_sword": "Endium Sword",
+  "item.lycurgus.endium_shovel": "Endium Shovel",
+  "item.lycurgus.endium_pickaxe": "Endium Pickaxe",
+  "item.lycurgus.endium_axe": "Endium Axe",
+  "item.lycurgus.endium_hoe": "Endium Hoe",
+
+  "item.lycurgus.greatsword": "Greatsword",
+  "item.lycurgus.endium_tool": "Endium Tool",
+
+  "block.lycurgus.steel_ore": "Steel Ore",
   "block.lycurgus.steel_block": "Steel Block",
+  "block.lycurgus.hands_cold_ore": "Hands Cold Ore",
+  "block.lycurgus.hands_cold_block": "Hands Cold Block",
+  "block.lycurgus.endium_ore": "Endium Ore",
+  "block.lycurgus.endium_block": "Endium Block",
+
 
   "itemGroup.lycurgus.general": "Lycurgus"
 }
