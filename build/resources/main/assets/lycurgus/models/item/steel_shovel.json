@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "lycurgus:items/endium_shovel",
+		"2": "lycurgus:items/steel_shovel",
 		"particle": "lycurgus:items/steel_shovel"
 	},
 	"elements": [

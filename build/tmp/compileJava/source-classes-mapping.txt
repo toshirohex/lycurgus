@@ -1,0 +1,16 @@
+net/toshirohex/lycurgus/mixin/ExampleMixin.java
+ net.fabricmc.example.mixin.ExampleMixin
+net/toshirohex/lycurgus/registry/ModBlocks.java
+ net.toshirohex.lycurgus.registry.ModBlocks
+net/toshirohex/lycurgus/overwrites/tools/Axe.java
+ net.toshirohex.lycurgus.overwrites.tools.Axe
+net/toshirohex/lycurgus/overwrites/tools/Hoe.java
+ net.toshirohex.lycurgus.overwrites.tools.Hoe
+net/toshirohex/lycurgus/Lycurgus.java
+ net.toshirohex.lycurgus.Lycurgus
+net/toshirohex/lycurgus/registry/ModItems.java
+ net.toshirohex.lycurgus.registry.ModItems
+net/toshirohex/lycurgus/materials/tools/ModToolMaterials.java
+ net.toshirohex.lycurgus.materials.tools.ModToolMaterials
+net/toshirohex/lycurgus/overwrites/tools/Pickaxe.java
+ net.toshirohex.lycurgus.overwrites.tools.Pickaxe
