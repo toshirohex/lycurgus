@@ -54,8 +54,9 @@ public class ModItems {
     public static final Pickaxe STEEL_TOOL = new Pickaxe(KNIGHT, +2, +1.0F, new Item.Settings().group(ITEM_GROUP));
     public static final ShovelItem HANDS_COLD_TOOL = new ShovelItem(KNIGHT, +1, +1.0F, new Item.Settings().group(ITEM_GROUP));
     public static final Axe ENDIUM_TOOL = new Axe(KNIGHT, +5, -0.5F, new Item.Settings().group(ITEM_GROUP));
-    public static final Hoe SXBLACKWOLF = new Hoe(KNIGHT,+0, +0.0F, new Item.Settings().group(ITEM_GROUP)); //this is an inside joke, dm Boboluto#2556 on discord if you want context.  I have zero plans of adding this into thc registry.
+    public static final Hoe SXBLACKWOLF = new Hoe(ToolMaterials.WOOD,+0, +0.0F, new Item.Settings().group(ITEM_GROUP)); //this is an inside joke, dm Boboluto#2556 on discord if you want context.  I have zero plans of adding this into thc registry.
     public static final Hoe PIXELZERAORA = new Hoe(ToolMaterials.WOOD, -100, -100.0F, new Item.Settings().group(ITEM_GROUP));
+
     //Block Items
     public static final BlockItem STEEL_ORE = new BlockItem(ModBlocks.STEEL_ORE, new Item.Settings().group(ITEM_GROUP));
     public static final BlockItem STEEL_BLOCK = new BlockItem(ModBlocks.STEEL_BLOCK, new Item.Settings().group(ITEM_GROUP));
@@ -109,6 +110,4 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_ore"), ENDIUM_ORE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_block"), ENDIUM_BLOCK);
     }
-
-
 }
