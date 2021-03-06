@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "lycurgus",
+  "version": "${version}",
+
+  "name": "Lycurgus",
+  "description": "Experimenting with fabric.",
+  "authors": [
+    "ToshiroHex.",
+    "Flemmli97.",
+    "Imacreeper2013.",
+    "Kernel_pan_ic."
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/lycurgus/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.toshirohex.lycurgus.Lycurgus"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
