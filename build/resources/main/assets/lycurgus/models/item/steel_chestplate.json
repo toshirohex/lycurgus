@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "lycurgus:item/steel_helmet"
+    "layer0": "lycurgus:items/steel_chestplate"
   }
 }

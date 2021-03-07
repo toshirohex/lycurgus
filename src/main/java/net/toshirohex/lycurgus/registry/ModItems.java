@@ -93,11 +93,13 @@ public class ModItems {
             Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_axe"), Axes[itemsRegistered-1]);
             Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_hoe"), Hoes[itemsRegistered-1]);
         }
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_tool"), Pickaxes[3]);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_tool"), Shovels[3]);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_tool"), Pickaxes[3]);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_tool"), Shovels[3]);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_tool"), Axes[3]);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "greatsword"), Swords[3]);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knightly_katana"), Swords[4]);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knightly_katana"), Swords[4]);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toe"), TOE);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toest"), TOEST);
 
         //Block Items
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_ore"), STEEL_ORE);

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "lycurgus:item/steel_boots"
+    "layer0": "lycurgus:items/steel_boots"
   }
 }
