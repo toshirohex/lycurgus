@@ -5,7 +5,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.toshirohex.lycurgus.Lycurgus;
-import net.toshirohex.lycurgus.materials.tools.ModToolMaterials;
+import net.toshirohex.lycurgus.materials.ModToolMaterials;
 import net.toshirohex.lycurgus.overwrites.tools.Axe;
 import net.toshirohex.lycurgus.overwrites.tools.Hoe;
 import net.toshirohex.lycurgus.overwrites.tools.Pickaxe;

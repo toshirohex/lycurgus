@@ -1,6 +1,6 @@
-package net.toshirohex.lycurgus.materials.tools;
+package net.toshirohex.lycurgus.materials;
 
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.toshirohex.lycurgus.registry.ModItems;
 import net.minecraft.item.ToolMaterial;
@@ -10,12 +10,10 @@ import net.toshirohex.lycurgus.registry.ModItems;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-
-    STEEL(3000, 3.0F, 3.0F, 3, 50, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    ENDIUM( 6000, 4.0F, 4.0F, 3, 50, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
-    HANDS_COLD(3000, 3.0F, 3.0F, 3, 50, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    KNIGHT(-1, 6.0F, 3.0F, 3, 50, () -> null);
-
+    STEEL(1561, 8.0F, 3.0F, 3, 20, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+    HANDS_COLD(2031, 8.5F, 3.0F, 3, 20, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+    ENDIUM(2031, 10.0F, 4.0F, 4, 30, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
+    KNIGHT(-1, 16.0F, 3.0F, 10, 50, () -> null);
 
     private final int durability;
     private final float miningSpeedMultiplier;
