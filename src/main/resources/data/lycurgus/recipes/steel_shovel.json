@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "E",
+    "S"
+  ],
+  "key": {
+    "#": {
+      "item": "lycurgus:steel_ingot"
+    },
+    "E": {
+      "item": "minecraft:iron_shovel"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "lycurgus:steel_shovel",
+    "count": 1
+  }
+}

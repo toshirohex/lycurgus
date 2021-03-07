@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#E#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "lycurgus:steel_ingot"
+    },
+    "E": {
+      "item": "minecraft:iron_leggings"
+    }
+  },
+  "result": {
+    "item": "lycurgus:steel_leggings",
+    "count": 1
+  }
+}

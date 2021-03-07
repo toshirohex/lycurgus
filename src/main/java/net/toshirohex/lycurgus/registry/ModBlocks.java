@@ -3,6 +3,7 @@ package net.toshirohex.lycurgus.registry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -14,36 +15,32 @@ public class ModBlocks {
     public static final Block STEEL_ORE = new Block(FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 2)
-            .requiresTool()
             .strength(5.0F, 30.0F));
+
     public static final Block STEEL_BLOCK = new Block(FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 2)
-            .requiresTool()
             .strength(5.0f, 30.0f));
 
     public static final Block HANDS_COLD_ORE = new Block(FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 2)
-            .requiresTool()
             .strength(5.0F, 30.0F));
+
     public static final Block HANDS_COLD_BLOCK = new Block(FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 2)
-            .requiresTool()
             .strength(5.0F, 30.0F));
 
     public static final Block ENDIUM_ORE = new Block(FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 3)
-            .requiresTool()
-            .strength(5.0F, 30.0F));
+            .strength(5.0F, 5.0F));
+
     public static final Block ENDIUM_BLOCK = new Block(FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 3)
-            .requiresTool()
-            .strength(5.0F, 30.0F));
-
+            .strength(30.0F, 1200.0F));
 
     public static void registerBlocks() {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "steel_ore"), STEEL_ORE);

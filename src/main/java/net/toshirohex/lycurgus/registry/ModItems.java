@@ -1,6 +1,5 @@
 package net.toshirohex.lycurgus.registry;
 
-import net.minecraft.block.Material;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -10,6 +9,7 @@ import net.toshirohex.lycurgus.materials.ModToolMaterials;
 import net.toshirohex.lycurgus.overwrites.tools.Axe;
 import net.toshirohex.lycurgus.overwrites.tools.Hoe;
 import net.toshirohex.lycurgus.overwrites.tools.Pickaxe;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems {
     public static final String MOD_ID = Lycurgus.MOD_ID;
@@ -73,14 +73,26 @@ public class ModItems {
     public static final Hoe PixelZeraora = new Hoe(ToolMaterials.WOOD, -100, -100.0F, ITEM_GROUP); //don't question
 
     //Block Items
-    public static final BlockItem STEEL_ORE = new BlockItem(ModBlocks.STEEL_ORE, ITEM_GROUP);
-    public static final BlockItem STEEL_BLOCK = new BlockItem(ModBlocks.STEEL_BLOCK, ITEM_GROUP);
+    public static final BlockItem STEEL_ORE = new BlockItem(ModBlocks.STEEL_ORE, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
+    public static final BlockItem STEEL_BLOCK = new BlockItem(ModBlocks.STEEL_BLOCK, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
 
-    public static final BlockItem HANDS_COLD_ORE = new BlockItem(ModBlocks.HANDS_COLD_ORE, ITEM_GROUP);
-    public static final BlockItem HANDS_COLD_BLOCK = new BlockItem(ModBlocks.HANDS_COLD_BLOCK, ITEM_GROUP);
+    public static final BlockItem HANDS_COLD_ORE = new BlockItem(ModBlocks.HANDS_COLD_ORE, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
+    public static final BlockItem HANDS_COLD_BLOCK = new BlockItem(ModBlocks.HANDS_COLD_BLOCK, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
 
-    public static final BlockItem ENDIUM_ORE = new BlockItem(ModBlocks.ENDIUM_ORE, ITEM_GROUP);
-    public static final BlockItem ENDIUM_BLOCK = new BlockItem(ModBlocks.ENDIUM_BLOCK, ITEM_GROUP);
+    public static final BlockItem ENDIUM_ORE = new BlockItem(ModBlocks.ENDIUM_ORE, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
+    public static final BlockItem ENDIUM_BLOCK = new BlockItem(ModBlocks.ENDIUM_BLOCK, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
 
     public static void registerItems() {
         String Names[] = {"steel", "hands_cold", "endium"};
@@ -92,6 +104,7 @@ public class ModItems {
             Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_shovel"), Shovels[itemsRegistered-1]);
             Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_axe"), Axes[itemsRegistered-1]);
             Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_hoe"), Hoes[itemsRegistered-1]);
+            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_ingot"), Ingots[itemsRegistered-1]);
         }
         //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_tool"), Pickaxes[3]);
         //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_tool"), Shovels[3]);
