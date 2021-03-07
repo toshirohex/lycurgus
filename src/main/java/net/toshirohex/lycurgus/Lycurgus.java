@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import net.toshirohex.lycurgus.registry.ModArmors;
 import net.toshirohex.lycurgus.registry.ModBlocks;
 import net.toshirohex.lycurgus.registry.ModItems;
 
@@ -21,5 +22,6 @@ public class Lycurgus implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
+		ModArmors.registerItems();
 	}
 }

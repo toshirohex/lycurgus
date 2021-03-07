@@ -10,9 +10,9 @@ import net.toshirohex.lycurgus.registry.ModItems;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    STEEL(1561, 8.0F, 3.0F, 3, 20, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    HANDS_COLD(2031, 8.5F, 3.0F, 3, 20, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
-    ENDIUM(2031, 10.0F, 4.0F, 4, 30, () -> Ingredient.ofItems(ModItems.ENDIUM_INGOT)),
+    STEEL(1561, 8.0F, 3.0F, 3, 20, () -> Ingredient.ofItems(ModItems.Ingots[0])),
+    HANDS_COLD(2031, 8.5F, 3.0F, 3, 20, () -> Ingredient.ofItems(ModItems.Ingots[1])),
+    ENDIUM(2031, 10.0F, 4.0F, 4, 30, () -> Ingredient.ofItems(ModItems.Ingots[2])),
     KNIGHT(-1, 16.0F, 3.0F, 10, 50, () -> null);
 
     private final int durability;

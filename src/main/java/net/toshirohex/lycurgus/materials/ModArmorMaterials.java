@@ -18,16 +18,16 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
 
     STEEL("steel", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
-        return Ingredient.ofItems(ModItems.STEEL_INGOT);
+        return Ingredient.ofItems(ModItems.Ingots[0]);
     }),
     HANDS_COLD("hands_cold", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(ModItems.HANDS_COLD_INGOT);
+        return Ingredient.ofItems(ModItems.Ingots[1]);
     }),
     ENDIUM("endium", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.ofItems(ModItems.ENDIUM_INGOT);
+        return Ingredient.ofItems(ModItems.Ingots[2]);
     }),
     KNIGHT("knight", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(ModItems.HANDS_COLD_INGOT);
+        return null;
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

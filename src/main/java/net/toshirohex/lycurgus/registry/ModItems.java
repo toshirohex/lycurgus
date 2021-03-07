@@ -1,5 +1,6 @@
 package net.toshirohex.lycurgus.registry;
 
+import net.minecraft.block.Material;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -12,90 +13,91 @@ import net.toshirohex.lycurgus.overwrites.tools.Pickaxe;
 
 public class ModItems {
     public static final String MOD_ID = Lycurgus.MOD_ID;
-    public static final ItemGroup ITEM_GROUP = Lycurgus.ITEM_GROUP;
-    public static final ToolMaterial STEEL = ModToolMaterials.STEEL;
-    public static final ToolMaterial HANDS_COLD = ModToolMaterials.HANDS_COLD;
-    public static final ToolMaterial ENDIUM = ModToolMaterials.ENDIUM;
-    public static final ToolMaterial KNIGHT = ModToolMaterials.KNIGHT;
+    public static final Item.Settings ITEM_GROUP = new Item.Settings().group(Lycurgus.ITEM_GROUP);
+    public static final ToolMaterial Materials[] = {
+            ModToolMaterials.STEEL,
+            ModToolMaterials.HANDS_COLD,
+            ModToolMaterials.ENDIUM,
+            ModToolMaterials.KNIGHT
+    };
     //Item Items
-    public static final Item TOE = new Item(new Item.Settings().group(ITEM_GROUP));
-    public static final Item TOEST = new Item(new Item.Settings().group(ITEM_GROUP)
+    public static final Item TOE = new Item(ITEM_GROUP);
+    public static final Item TOEST = new Item(new Item.Settings().group(Lycurgus.ITEM_GROUP)
             .food(FoodComponents.ENCHANTED_GOLDEN_APPLE)
             .maxDamage(100)
             .fireproof()
             .rarity(Rarity.EPIC)
     );
 
-    public static final Item STEEL_INGOT = new Item(new Item.Settings().group(ITEM_GROUP));
-    public static final SwordItem STEEL_SWORD = new SwordItem(STEEL, +3, +0.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Pickaxe STEEL_PICKAXE = new Pickaxe(STEEL, +2, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final ShovelItem STEEL_SHOVEL = new ShovelItem(STEEL, +1, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Axe STEEL_AXE = new Axe(STEEL, +5, -0.5F, new Item.Settings().group(ITEM_GROUP));
-    public static final Hoe STEEL_HOE = new Hoe(STEEL, +0, +0.0F, new Item.Settings().group(ITEM_GROUP));
+    public static final Item Ingots[] = {
+            new Item(ITEM_GROUP),
+            new Item(ITEM_GROUP),
+            new Item(ITEM_GROUP)
+    };
 
-    public static final Item HANDS_COLD_INGOT = new Item(new Item.Settings().group(ITEM_GROUP));
-    public static final SwordItem HANDS_COLD_SWORD = new SwordItem(HANDS_COLD, +3, +0.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Pickaxe HANDS_COLD_PICKAXE = new Pickaxe(HANDS_COLD, +2, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final ShovelItem HANDS_COLD_SHOVEL = new ShovelItem(HANDS_COLD, +1, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Axe HANDS_COLD_AXE = new Axe(HANDS_COLD, +5, -0.5F, new Item.Settings().group(ITEM_GROUP));
-    public static final Hoe HANDS_COLD_HOE = new Hoe(HANDS_COLD, +0, +0.0F, new Item.Settings().group(ITEM_GROUP));
+    public static final SwordItem Swords[] = {
+            new SwordItem(Materials[0], +3, +0.0F, ITEM_GROUP), //Steel Sword
+            new SwordItem(Materials[1], +3, +0.0F, ITEM_GROUP), //Hands Cold Sword
+            new SwordItem(Materials[2], +3, +0.0F, ITEM_GROUP), //Endium Sword
+            new SwordItem(Materials[3], +4, +2, ITEM_GROUP), //Greatsword
+            new SwordItem(Materials[3], +3, +0.0F, ITEM_GROUP) //Knightly Katana
+    };
 
-    public static final Item ENDIUM_INGOT = new Item(new Item.Settings().group(ITEM_GROUP));
-    public static final SwordItem ENDIUM_SWORD = new SwordItem(ENDIUM, +3, +0.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Pickaxe ENDIUM_PICKAXE = new Pickaxe(ENDIUM, +2, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final ShovelItem ENDIUM_SHOVEL = new ShovelItem(ENDIUM, +1, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Axe ENDIUM_AXE = new Axe(ENDIUM, +5, -0.5F, new Item.Settings().group(ITEM_GROUP));
-    public static final Hoe ENDIUM_HOE = new Hoe(ENDIUM, +0, +0.0F, new Item.Settings().group(ITEM_GROUP));
+    public static final Pickaxe Pickaxes[] = {
+            new Pickaxe(Materials[0], +2, +1.0F, ITEM_GROUP), //Steel Pickaxe
+            new Pickaxe(Materials[1], +2, +1.0F, ITEM_GROUP), //Hands Cold Pickaxe
+            new Pickaxe(Materials[2], +2, +1.0F, ITEM_GROUP), //Endium Pickaxe
+            new Pickaxe(Materials[3], +2, +1.0F, ITEM_GROUP)  //Steel Tool
+    };
 
-    public static final SwordItem GREATSWORD = new SwordItem(ModToolMaterials.KNIGHT, +4, +2, new Item.Settings().group(ITEM_GROUP));
-    public static final SwordItem KNIGHTLY_KATANA = new SwordItem(KNIGHT, +3, +0.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Pickaxe STEEL_TOOL = new Pickaxe(KNIGHT, +2, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final ShovelItem HANDS_COLD_TOOL = new ShovelItem(KNIGHT, +1, +1.0F, new Item.Settings().group(ITEM_GROUP));
-    public static final Axe ENDIUM_TOOL = new Axe(KNIGHT, +5, -0.5F, new Item.Settings().group(ITEM_GROUP));
-    public static final Hoe PIXELZERAORA = new Hoe(ToolMaterials.WOOD, -100, -100.0F, new Item.Settings().group(ITEM_GROUP)); //don't question
+    public static final ShovelItem Shovels[] = {
+            new ShovelItem(Materials[0], +1, +1.0F, ITEM_GROUP), //Steel Shovel
+            new ShovelItem(Materials[1], +1, +1.0F, ITEM_GROUP), //Hands Cold Shovel
+            new ShovelItem(Materials[2], +1, +1.0F, ITEM_GROUP),  //Endium Shovel
+            new ShovelItem(Materials[3], +1, +1.0F, ITEM_GROUP) //Hands Cold Tool
+    };
+
+    public static final Axe Axes[] = {
+            new Axe(Materials[0], +5, -0.5F, ITEM_GROUP), //Steel Axe
+            new Axe(Materials[1], +5, -0.5F, ITEM_GROUP), //Hands Cold Axe
+            new Axe(Materials[2], +5, -0.5F, ITEM_GROUP),  //Endium Axe
+            new Axe(Materials[3], +5, -0.5F, ITEM_GROUP)  //Endium Tool
+    };
+
+    public static final Hoe Hoes[] = {
+            new Hoe(Materials[0], +0, +0.0F, ITEM_GROUP), //Steel Hoe
+            new Hoe(Materials[1], +0, +0.0F, ITEM_GROUP), //Hands Cold Hoe
+            new Hoe(Materials[2], +0, +0.0F, ITEM_GROUP)  //Endium Hoe
+    };
+
+    public static final Hoe PixelZeraora = new Hoe(ToolMaterials.WOOD, -100, -100.0F, ITEM_GROUP); //don't question
 
     //Block Items
-    public static final BlockItem STEEL_ORE = new BlockItem(ModBlocks.STEEL_ORE, new Item.Settings().group(ITEM_GROUP));
-    public static final BlockItem STEEL_BLOCK = new BlockItem(ModBlocks.STEEL_BLOCK, new Item.Settings().group(ITEM_GROUP));
+    public static final BlockItem STEEL_ORE = new BlockItem(ModBlocks.STEEL_ORE, ITEM_GROUP);
+    public static final BlockItem STEEL_BLOCK = new BlockItem(ModBlocks.STEEL_BLOCK, ITEM_GROUP);
 
-    public static final BlockItem HANDS_COLD_ORE = new BlockItem(ModBlocks.HANDS_COLD_ORE, new Item.Settings().group(ITEM_GROUP));
-    public static final BlockItem HANDS_COLD_BLOCK = new BlockItem(ModBlocks.HANDS_COLD_BLOCK, new Item.Settings().group(ITEM_GROUP));
+    public static final BlockItem HANDS_COLD_ORE = new BlockItem(ModBlocks.HANDS_COLD_ORE, ITEM_GROUP);
+    public static final BlockItem HANDS_COLD_BLOCK = new BlockItem(ModBlocks.HANDS_COLD_BLOCK, ITEM_GROUP);
 
-    public static final BlockItem ENDIUM_ORE = new BlockItem(ModBlocks.ENDIUM_ORE, new Item.Settings().group(ITEM_GROUP));
-    public static final BlockItem ENDIUM_BLOCK = new BlockItem(ModBlocks.ENDIUM_BLOCK, new Item.Settings().group(ITEM_GROUP));
+    public static final BlockItem ENDIUM_ORE = new BlockItem(ModBlocks.ENDIUM_ORE, ITEM_GROUP);
+    public static final BlockItem ENDIUM_BLOCK = new BlockItem(ModBlocks.ENDIUM_BLOCK, ITEM_GROUP);
 
     public static void registerItems() {
-        //Item Items
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toe"), TOE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toest"), TOEST);
-
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_ingot"), STEEL_INGOT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_sword"), STEEL_SWORD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_pickaxe"), STEEL_PICKAXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_shovel"), STEEL_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_axe"), STEEL_AXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_hoe"), STEEL_HOE);
-
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_ingot"), HANDS_COLD_INGOT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_sword"), HANDS_COLD_SWORD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_pickaxe"), HANDS_COLD_PICKAXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_shovel"), HANDS_COLD_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_axe"), HANDS_COLD_AXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_hoe"), HANDS_COLD_HOE);
-
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_ingot"), ENDIUM_INGOT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_sword"), ENDIUM_SWORD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_pickaxe"), ENDIUM_PICKAXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_shovel"), ENDIUM_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_axe"), ENDIUM_AXE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_hoe"), ENDIUM_HOE);
-
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "greatsword"), GREATSWORD);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knightly_katana"), KNIGHTLY_KATANA);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_tool"), STEEL_TOOL);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_tool"), HANDS_COLD_TOOL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_tool"), ENDIUM_TOOL);
-
+        String Names[] = {"steel", "hands_cold", "endium"};
+        int itemsRegistered = 0;
+        while(itemsRegistered < 3) {
+            itemsRegistered = itemsRegistered + 1;
+            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_sword"), Swords[itemsRegistered-1]);
+            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_pickaxe"), Pickaxes[itemsRegistered-1]);
+            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_shovel"), Shovels[itemsRegistered-1]);
+            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_axe"), Axes[itemsRegistered-1]);
+            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_hoe"), Hoes[itemsRegistered-1]);
+        }
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_tool"), Pickaxes[3]);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_tool"), Shovels[3]);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_tool"), Axes[3]);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "greatsword"), Swords[3]);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knightly_katana"), Swords[4]);
 
         //Block Items
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_ore"), STEEL_ORE);
