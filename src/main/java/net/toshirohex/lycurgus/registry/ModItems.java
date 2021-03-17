@@ -95,33 +95,30 @@ public class ModItems {
             .maxCount(64));
 
     public static void registerItems() {
-        String Names[] = {"steel", "hands_cold", "endium"};
-        int itemsRegistered = 0;
-        while(itemsRegistered < 3) {
-            itemsRegistered = itemsRegistered + 1;
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_sword"), Swords[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_pickaxe"), Pickaxes[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_shovel"), Shovels[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_axe"), Axes[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_hoe"), Hoes[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[itemsRegistered - 1] + "_ingot"), Ingots[itemsRegistered-1]);
+        String Names[] = {"toe", "toest", "steel_ingot", "hands_cold_ingot", "endium_ingot",
+                "steel_sword", "hands_cold_sword", "endium_sword", "greatsword", "knightly_katana",
+                "steel_pickaxe", "hands_cold_pickaxe", "endium_pickaxe", "steel_tool",
+                "steel_shovel", "hands_cold_shovel", "endium_shovel", "hands_cold_tool",
+                "steel_axe", "hands_cold_axe", "endium_axe", "endium_tool",
+                "steel_hoe", "hands_cold_hoe", "endium_hoe"};
+        Item Items[] = {TOE, TOEST, Ingots[0], Ingots[1], Ingots[2],
+                Swords[0], Swords[1], Swords[2], Swords[3], Swords[4],
+                Pickaxes[0],Pickaxes[1],Pickaxes[2],Pickaxes[3],
+                Shovels[0], Shovels[1], Shovels[2], Shovels[3],
+                Axes[0], Axes[1], Axes[2], Axes[3],
+                Hoes[0], Hoes[1], Hoes[2]};
+        if(Names.length == Items.length) {
+            for(int i = 0; i < Items.length; i += 1) {
+                Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[i]), Items[i]);
+            }
         }
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_tool"), Pickaxes[3]);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_tool"), Shovels[3]);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_tool"), Axes[3]);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "greatsword"), Swords[3]);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knightly_katana"), Swords[4]);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toe"), TOE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "toest"), TOEST);
-
-        //Block Items
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_ore"), STEEL_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel_block"), STEEL_BLOCK);
-
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_ore"), HANDS_COLD_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold_block"), HANDS_COLD_BLOCK);
-
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_ore"), ENDIUM_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium_block"), ENDIUM_BLOCK);
+        //block items
+        Item Blocks[] = {STEEL_ORE, STEEL_BLOCK, HANDS_COLD_ORE, HANDS_COLD_BLOCK, ENDIUM_ORE, ENDIUM_BLOCK};
+        String bNames[] = {"steel_ore", "steel_block", "hands_cold_ore", "hands_cold_block", "endium_ore", "endium_block"};
+        if(Blocks.length == bNames.length){
+            for(int o = 0; o < Blocks.length; o += 1){
+                Registry.register(Registry.ITEM, new Identifier(MOD_ID, bNames[o]), Blocks[o]);
+            }
+        }
     }
 }

@@ -48,14 +48,21 @@ public class ModArmors {
 
 
     public static void registerItems(){
-        int itemsRegistered = 0;
-        String Names[] = {"_helmet", "_chestplate", "_leggings", "_boots"};
-        while(itemsRegistered<4){
-            itemsRegistered += 1;
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, "steel" + Names[itemsRegistered-1]), STEEL[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hands_cold" + Names[itemsRegistered-1]), HANDS_COLD[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, "endium" + Names[itemsRegistered-1]), ENDIUM[itemsRegistered-1]);
-            Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knight" + Names[itemsRegistered-1]), KNIGHT[itemsRegistered-1]);
+        String Names[] = {
+                "steel_helmet", "steel_chestplate", "steel_leggings", "steel_boots",
+                "hands_cold_helmet", "hands_cold_chestplate", "hands_cold_leggings", "hands_cold_boots",
+                "endium_helmet", "endium_chestplate", "endium_leggings", "endium_boots",
+                "knight_helmet", "knight_chestplate", "knight_leggings","knight_boots"};
+        Item Armors[] = {
+                STEEL[0], STEEL[0], STEEL[0], STEEL[0],
+                HANDS_COLD[0], HANDS_COLD[1], HANDS_COLD[2], HANDS_COLD[3],
+                ENDIUM[0], ENDIUM[1], ENDIUM[2], ENDIUM[3],
+                KNIGHT[0], KNIGHT[1], KNIGHT[2], KNIGHT[3]
+        };
+        if(Names.length == Armors.length){
+            for(int i = 0; i<Names.length; i += 1) {
+                Registry.register(Registry.ITEM, new Identifier(MOD_ID, Names[i]), Armors[i]);
+            }
         }
     }
 }
