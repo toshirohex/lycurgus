@@ -4,8 +4,6 @@ net/toshirohex/lycurgus/registry/ModBlocks.java
  net.toshirohex.lycurgus.registry.ModBlocks
 net/toshirohex/lycurgus/materials/ModArmorMaterials.java
  net.toshirohex.lycurgus.materials.ModArmorMaterials
-net/toshirohex/lycurgus/registry/yes.java
- net.toshirohex.lycurgus.registry.yes
 net/toshirohex/lycurgus/overwrites/tools/Axe.java
  net.toshirohex.lycurgus.overwrites.tools.Axe
 net/toshirohex/lycurgus/overwrites/tools/Hoe.java
@@ -14,10 +12,10 @@ net/toshirohex/lycurgus/Lycurgus.java
  net.toshirohex.lycurgus.Lycurgus
 net/toshirohex/lycurgus/registry/ModItems.java
  net.toshirohex.lycurgus.registry.ModItems
+net/toshirohex/lycurgus/registry/Toe.java
+ net.toshirohex.lycurgus.registry.Toe
 net/toshirohex/lycurgus/materials/ModToolMaterials.java
  net.toshirohex.lycurgus.materials.ModToolMaterials
-net/toshirohex/lycurgus/registry/ModFood.java
- net.toshirohex.lycurgus.registry.ModFood
 net/toshirohex/lycurgus/overwrites/tools/Pickaxe.java
  net.toshirohex.lycurgus.overwrites.tools.Pickaxe
 net/toshirohex/lycurgus/registry/ModArmors.java
