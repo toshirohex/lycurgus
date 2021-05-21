@@ -29,6 +29,7 @@ public class Lycurgus implements ModInitializer {
 	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
 			new Identifier(MOD_ID, "general"),
 			() -> new ItemStack(ModItems.Ingots[2]));
+
 	private static final ConfiguredFeature<?, ?> STEEL_ORE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -63,7 +64,7 @@ public class Lycurgus implements ModInitializer {
 					0,
 					64)))
 			.spreadHorizontally()
-			.repeat(5);
+			.repeat(5); // number of veins per chunk
 
 	@Override
 	public void onInitialize() {
@@ -85,7 +86,6 @@ public class Lycurgus implements ModInitializer {
 				new Identifier("lycurgus", "endium_ore_end"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, steelOreEnd.getValue(), ENDIUM_ORE_END);
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, steelOreEnd);
+
 	}
-
-
 }

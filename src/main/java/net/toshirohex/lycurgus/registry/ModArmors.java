@@ -6,6 +6,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.toshirohex.lycurgus.Lycurgus;
 import net.toshirohex.lycurgus.materials.ModArmorMaterials;
+import net.toshirohex.lycurgus.overwrites.armor.KnightArmorItem;
 
 public class ModArmors {
     public static final String MOD_ID = Lycurgus.MOD_ID;
@@ -39,11 +40,11 @@ public class ModArmors {
             new ArmorItem(Materials[2], Slots[3], ITEM_GROUP)
     };
 
-    public static ArmorItem KNIGHT[] = {
-            new ArmorItem(Materials[3], Slots[0], ITEM_GROUP),
-            new ArmorItem(Materials[3], Slots[1], ITEM_GROUP),
-            new ArmorItem(Materials[3], Slots[2], ITEM_GROUP),
-            new ArmorItem(Materials[3], Slots[3], ITEM_GROUP)
+    public static KnightArmorItem KNIGHT[] = {
+            new KnightArmorItem(Materials[3], Slots[0], ITEM_GROUP),
+            new KnightArmorItem(Materials[3], Slots[1], ITEM_GROUP),
+            new KnightArmorItem(Materials[3], Slots[2], ITEM_GROUP),
+            new KnightArmorItem(Materials[3], Slots[3], ITEM_GROUP)
     };
 
 
@@ -54,7 +55,7 @@ public class ModArmors {
                 "endium_helmet", "endium_chestplate", "endium_leggings", "endium_boots",
                 "knight_helmet", "knight_chestplate", "knight_leggings","knight_boots"};
         Item Armors[] = {
-                STEEL[0], STEEL[0], STEEL[0], STEEL[0],
+                STEEL[0], STEEL[1], STEEL[2], STEEL[3],
                 HANDS_COLD[0], HANDS_COLD[1], HANDS_COLD[2], HANDS_COLD[3],
                 ENDIUM[0], ENDIUM[1], ENDIUM[2], ENDIUM[3],
                 KNIGHT[0], KNIGHT[1], KNIGHT[2], KNIGHT[3]

@@ -1,19 +1,27 @@
-net/toshirohex/lycurgus/mixin/ExampleMixin.java
- net.fabricmc.example.mixin.ExampleMixin
 net/toshirohex/lycurgus/registry/ModBlocks.java
  net.toshirohex.lycurgus.registry.ModBlocks
-net/toshirohex/lycurgus/materials/ModArmorMaterials.java
- net.toshirohex.lycurgus.materials.ModArmorMaterials
-net/toshirohex/lycurgus/overwrites/tools/Axe.java
- net.toshirohex.lycurgus.overwrites.tools.Axe
+net/toshirohex/lycurgus/overwrites/items/Toe.java
+ net.toshirohex.lycurgus.overwrites.items.Toe
 net/toshirohex/lycurgus/overwrites/tools/Hoe.java
  net.toshirohex.lycurgus.overwrites.tools.Hoe
+net/toshirohex/lycurgus/overwrites/tools/Axe.java
+ net.toshirohex.lycurgus.overwrites.tools.Axe
 net/toshirohex/lycurgus/Lycurgus.java
  net.toshirohex.lycurgus.Lycurgus
+net/toshirohex/lycurgus/interfaces/IKnightArmor.java
+ net.toshirohex.lycurgus.interfaces.IKnightArmor
+net/toshirohex/lycurgus/overwrites/items/GunItem.java
+ net.toshirohex.lycurgus.overwrites.items.GunItem
+net/toshirohex/lycurgus/materials/ModFoodComponents.java
+ net.toshirohex.lycurgus.materials.ModFoodComponents
+net/toshirohex/lycurgus/mixin/ExampleMixin.java
+ net.fabricmc.example.mixin.ExampleMixin
+net/toshirohex/lycurgus/materials/ModArmorMaterials.java
+ net.toshirohex.lycurgus.materials.ModArmorMaterials
 net/toshirohex/lycurgus/registry/ModItems.java
  net.toshirohex.lycurgus.registry.ModItems
-net/toshirohex/lycurgus/registry/Toe.java
- net.toshirohex.lycurgus.registry.Toe
+net/toshirohex/lycurgus/overwrites/armor/KnightArmorItem.java
+ net.toshirohex.lycurgus.overwrites.armor.KnightArmorItem
 net/toshirohex/lycurgus/materials/ModToolMaterials.java
  net.toshirohex.lycurgus.materials.ModToolMaterials
 net/toshirohex/lycurgus/overwrites/tools/Pickaxe.java
