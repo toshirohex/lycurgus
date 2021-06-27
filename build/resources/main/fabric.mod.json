@@ -4,16 +4,13 @@
   "version": "1.0.0",
 
   "name": "Lycurgus",
-  "description": "Experimenting with fabric.",
+  "description": "Yes",
   "authors": [
-    "ToshiroHex.",
-    "Flemmli97.",
-    "Imacreeper2013.",
-    "Kernel_pan_ic."
+    "ToshiroHex"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/toshirohex/lycurgus"
   },
 
   "license": "CC0-1.0",
@@ -30,9 +27,10 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.17.x",
+    "java": ">=16"
   },
   "suggests": {
     "another-mod": "*"

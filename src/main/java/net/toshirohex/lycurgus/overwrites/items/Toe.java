@@ -24,7 +24,6 @@ public class Toe extends Item {
                 PlayerEntity player = (PlayerEntity)entity;
                 if(((PlayerEntity) entity).isHolding(this)) {
                     player.addStatusEffect(new StatusEffectInstance(statusEffectInstance));
-                    player.abilities.creativeMode = true;
                 }
             }
         }

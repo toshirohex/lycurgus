@@ -1,11 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Minecraft Client" type="Application" factoryName="Application">
-    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main" />
-    <module name="lycurgus.main" />
-    <option name="PROGRAM_PARAMETERS" value="--username=athygerson101@gmail.com --password=05022Oo4" />
-    <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\athyg\Documents\Intellij\lycurgus\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotClient" />
+    <module name="Lycurgus.main" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <option name="VM_PARAMETERS" value="-XX:+ShowCodeDetailsInExceptionMessages -Dfabric.dli.config=/home/toshirohex/Documents/GitHub/Lycurgus/.gradle/loom-cache/launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotClient" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run/" />
     <method v="2">
       <option name="Make" enabled="true" />

@@ -22,11 +22,11 @@ public class GunItem extends Item{
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        world.playSound((PlayerEntity) null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (RANDOM.nextFloat() * 0.4F + 0.8F));
+        world.playSound((PlayerEntity) null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F);
         if (!world.isClient) {
             SnowballEntity snowballEntity = new SnowballEntity(world, user);
             snowballEntity.setItem(new ItemStack(Items.COBBLESTONE));
-            snowballEntity.setProperties(user, user.pitch, user.yaw, 0.0F, 1.5F, 1.0F);
+            snowballEntity.setProperties(user, user.getPitch(), user.headYaw, 0.0F, 1.5F, 1.0F);
             world.spawnEntity(snowballEntity);
         }
 

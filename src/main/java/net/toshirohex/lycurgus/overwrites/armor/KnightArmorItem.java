@@ -24,8 +24,7 @@ public class KnightArmorItem extends ArmorItem implements IKnightArmor {
     public void onRemoved(PlayerEntity player){
         if(this.slot==EquipmentSlot.CHEST){
             if(!player.isCreative()){
-                player.abilities.allowFlying=false;
-                player.abilities.flying=false;
+
             }
         }
     }
