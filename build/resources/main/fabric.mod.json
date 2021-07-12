@@ -4,7 +4,7 @@
   "version": "1.0.0",
 
   "name": "Lycurgus",
-  "description": "Yes",
+  "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "ToshiroHex"
   ],
@@ -23,7 +23,7 @@
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "lycurgus.mixins.json"
   ],
 
   "depends": {

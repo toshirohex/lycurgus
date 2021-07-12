@@ -12,9 +12,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
@@ -23,8 +23,6 @@ import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 import net.toshirohex.lycurgus.registry.ModArmors;
 import net.toshirohex.lycurgus.registry.ModBlocks;
 import net.toshirohex.lycurgus.registry.ModItems;
-
-import java.util.List;
 
 public class Lycurgus implements ModInitializer {
 
@@ -38,29 +36,31 @@ public class Lycurgus implements ModInitializer {
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
 					ModBlocks.STEEL_ORE.getDefaultState(),
-					9)) // Vein size
+					6)) // Vein size
 			.range(new RangeDecoratorConfig(
 					// You can also use one of the other height providers if you don't want a uniform distribution
-					UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(25)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(10), YOffset.fixed(20)))) // Inclusive min and max height
 			.spreadHorizontally()
 			.repeat(8); // Number of veins per chunk
-	private static ConfiguredFeature<?, ?> HANDSCOLD_ORE_OVERWORLD = Feature.ORE
+
+	private static ConfiguredFeature<?, ?> HANDS_COLD_ORE_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-					ModBlocks.STEEL_ORE.getDefaultState(),
-					9)) // Vein size
+					ModBlocks.HANDS_COLD_ORE.getDefaultState(),
+					6)) // Vein size
 			.range(new RangeDecoratorConfig(
 					// You can also use one of the other height providers if you don't want a uniform distribution
-					UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(20)))) // Inclusive min and max height
+					UniformHeightProvider.create(YOffset.aboveBottom(10), YOffset.fixed(20)))) // Inclusive min and max height
 			.spreadHorizontally()
-			.repeat(6); // Number of veins per chunk
+			.repeat(8); // Number of veins per chunk
+
 	private static ConfiguredFeature<?, ?> ENDIUM_ORE_END = Feature.ORE
 			.configure(new OreFeatureConfig(
-					(List<OreFeatureConfig.Target>) new BlockMatchRuleTest(Blocks.END_STONE), // Base block is end stone in The End biomes
-					// ModBlocks.ENDIUM_ORE.getDefaultState(),
+					new BlockMatchRuleTest(Blocks.END_STONE), // Base block is end stone in The End biomes
+					Blocks.WHITE_WOOL.getDefaultState(),
 					4))
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(256))))
+					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64))))
 			.spreadHorizontally()
 			.repeat(5);
 
@@ -75,10 +75,10 @@ public class Lycurgus implements ModInitializer {
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, steelOreOverworld.getValue(), STEEL_ORE_OVERWORLD);
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, steelOreOverworld);
 
-		RegistryKey<ConfiguredFeature<?, ?>> handscoldOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-				new Identifier("lycurgus", "handscold_ore_overworld"));
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, handscoldOreOverworld.getValue(), HANDSCOLD_ORE_OVERWORLD);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, handscoldOreOverworld);
+		RegistryKey<ConfiguredFeature<?, ?>> handsColdOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("lycurgus", "hands_cold_ore_overworld"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, handsColdOreOverworld.getValue(), HANDS_COLD_ORE_OVERWORLD);
+		BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.ICY), GenerationStep.Feature.UNDERGROUND_ORES, handsColdOreOverworld);
 
 		RegistryKey<ConfiguredFeature<?, ?>> endiumOreEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("lycurgus", "endium_ore_end"));

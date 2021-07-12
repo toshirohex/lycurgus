@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Minecraft Server" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main" />
-    <module name="Lycurgus.main" />
+    <module name="lycurgus.main" />
     <option name="PROGRAM_PARAMETERS" value="nogui" />
-    <option name="VM_PARAMETERS" value="-XX:+ShowCodeDetailsInExceptionMessages -Dfabric.dli.config=/home/toshirohex/Documents/GitHub/Lycurgus/.gradle/loom-cache/launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotServer" />
+    <option name="VM_PARAMETERS" value="-XX:+ShowCodeDetailsInExceptionMessages -Dfabric.dli.config=C:\Users\athyg\AppData\Local\GitHubDesktop\app-2.9.0\lycurgus\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotServer" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run/" />
     <method v="2">
       <option name="Make" enabled="true" />
