@@ -12,6 +12,8 @@ net/toshirohex/lycurgus/interfaces/IKnightArmor.java
  net.toshirohex.lycurgus.interfaces.IKnightArmor
 net/toshirohex/lycurgus/overwrites/items/GunItem.java
  net.toshirohex.lycurgus.overwrites.items.GunItem
+net/toshirohex/lycurgus/overwrites/entities/PlayerEntity.java
+ net.toshirohex.lycurgus.overwrites.entities.PlayerEntity
 net/toshirohex/lycurgus/materials/ModFoodComponents.java
  net.toshirohex.lycurgus.materials.ModFoodComponents
 net/toshirohex/lycurgus/mixin/ExampleMixin.java

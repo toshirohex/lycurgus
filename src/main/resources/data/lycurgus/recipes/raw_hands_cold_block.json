@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "lycurgus:raw_hands_cold"
+    }
+  },
+  "result": {
+    "item": "lycurgus:raw_hands_cold_block",
+    "count": 1
+  }
+}

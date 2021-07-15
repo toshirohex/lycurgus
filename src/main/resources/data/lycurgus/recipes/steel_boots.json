@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#E#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "lycurgus:steel_ingot"
+    },
+    "E": {
+      "item": "minecraft:iron_boots"
+    }
+  },
+  "result": {
+    "item": "lycurgus:steel_boots",
+    "count": 1
+  }
+}

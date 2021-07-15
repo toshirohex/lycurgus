@@ -14,9 +14,9 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
 
     STEEL("steel", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.ofItems(ModItems.Ingots[0])),
-    HANDS_COLD("hands_cold", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> Ingredient.ofItems(ModItems.Ingots[1])),
-    ENDIUM("endium", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3.0F, 0.1F, () -> Ingredient.ofItems(ModItems.Ingots[2])),
-    KNIGHT("knight", 25, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> null);
+    HANDS_COLD("hands_cold", 25, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> Ingredient.ofItems(ModItems.Ingots[1])),
+    ENDIUM("endium", 37, new int[]{4, 7, 9, 4}, 15, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3.0F, 0.1F, () -> Ingredient.ofItems(ModItems.Ingots[2])),
+    KNIGHT("knight", 25, new int[]{12, 20, 32, 12}, 9, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> null);
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private final String name;

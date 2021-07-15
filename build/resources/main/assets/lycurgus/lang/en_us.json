@@ -1,9 +1,14 @@
 {
   "item.lycurgus.toe": "Toe",
   "item.lycurgus.toest": "Toest",
+
   "item.lycurgus.steel_ingot": "Steel Ingot",
   "item.lycurgus.hands_cold_ingot": "Hands Cold Ingot",
   "item.lycurgus.endium_ingot": "Endium Ingot",
+
+  "item.lycurgus.raw_steel": "Raw Steel",
+  "item.lycurgus.raw_hands_cold": "Raw Hands Cold",
+  "item.lycurgus.raw_endium": "Raw Endium",
 
   "item.lycurgus.steel_sword": "Steel Sword",
   "item.lycurgus.steel_shovel": "Steel Shovel",
@@ -48,11 +53,15 @@
 
   "block.lycurgus.steel_ore": "Steel Ore",
   "block.lycurgus.steel_block": "Steel Block",
+  "block.lycurgus.raw_steel_block": "Raw Steel Block",
+
   "block.lycurgus.hands_cold_ore": "Hands Cold Ore",
   "block.lycurgus.hands_cold_block": "Hands Cold Block",
+  "block.lycurgus.raw_hands_cold_block": "Raw Hands Cold Block",
+
   "block.lycurgus.endium_ore": "Endium Ore",
   "block.lycurgus.endium_block": "Endium Block",
-
+  "block.lycurgus.raw_endium_block": "Raw Endium Block",
 
   "itemGroup.lycurgus.general": "Lycurgus"
 }

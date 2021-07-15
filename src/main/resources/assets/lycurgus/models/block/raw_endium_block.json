@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lycurgus:blocks/raw_endium_block"
+  }
+}

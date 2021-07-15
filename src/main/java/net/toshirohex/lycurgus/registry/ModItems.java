@@ -43,6 +43,10 @@ public class ModItems {
     public static final Item HANDS_COLD_INGOT = new Item(ITEM_GROUP);
     public static final Item ENDIUM_INGOT = new Item(ITEM_GROUP);
 
+    public static final Item RAW_STEEL = new Item(ITEM_GROUP);
+    public static final Item RAW_HANDS_COLD = new Item(ITEM_GROUP);
+    public static final Item RAW_ENDIUM = new Item(ITEM_GROUP);
+
     public static final SwordItem STEEL_SWORD = new SwordItem(Materials[0],+3,+0.0F,ITEM_GROUP);
     public static final Pickaxe STEEL_PICKAXE = new Pickaxe(Materials[0], +2, +1.0F, ITEM_GROUP);
     public static final ShovelItem STEEL_SHOVEL = new ShovelItem(Materials[0], +1, +1.0F, ITEM_GROUP);
@@ -79,10 +83,18 @@ public class ModItems {
             .group(Lycurgus.ITEM_GROUP)
             .maxCount(64));
 
+    public static final BlockItem RAW_STEEL_BLOCK = new BlockItem(ModBlocks.RAW_STEEL_BLOCK, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
+
     public static final BlockItem HANDS_COLD_ORE = new BlockItem(ModBlocks.HANDS_COLD_ORE, new Item.Settings()
             .group(Lycurgus.ITEM_GROUP)
             .maxCount(64));
     public static final BlockItem HANDS_COLD_BLOCK = new BlockItem(ModBlocks.HANDS_COLD_BLOCK, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
+
+    public static final BlockItem RAW_HANDS_COLD_BLOCK = new BlockItem(ModBlocks.RAW_HANDS_COLD_BLOCK, new Item.Settings()
             .group(Lycurgus.ITEM_GROUP)
             .maxCount(64));
 
@@ -93,15 +105,22 @@ public class ModItems {
             .group(Lycurgus.ITEM_GROUP)
             .maxCount(64));
 
+    public static final BlockItem RAW_ENDIUM_BLOCK = new BlockItem(ModBlocks.RAW_ENDIUM_BLOCK, new Item.Settings()
+            .group(Lycurgus.ITEM_GROUP)
+            .maxCount(64));
+
     //public static void
     public static String Names[] = {"toe", "toest", "steel_ingot", "hands_cold_ingot", "endium_ingot",
+            "raw_steel", "raw_hands_cold", "raw_endium",
             "steel_sword", "steel_pickaxe", "steel_shovel", "steel_axe", "steel_hoe",
             "hands_cold_sword", "hands_cold_pickaxe", "hands_cold_shovel", "hands_cold_axe", "hands_cold_hoe",
             "endium_sword", "endium_pickaxe", "endium_shovel", "endium_axe", "endium_hoe",
             "greatsword", "knightly_katana", "steel_tool", "hands_cold_tool", "endium_tool",
             "pistol"};
+
     public static void registerItems() {
         Item Items[] = {TOE, TOEST, STEEL_INGOT, HANDS_COLD_INGOT, ENDIUM_INGOT,
+                RAW_STEEL, RAW_HANDS_COLD, RAW_ENDIUM,
                 STEEL_SWORD, STEEL_PICKAXE, STEEL_SHOVEL, STEEL_AXE, STEEL_HOE,
                 HANDS_COLD_SWORD, HANDS_COLD_PICKAXE, HANDS_COLD_SHOVEL, HANDS_COLD_AXE, HANDS_COLD_HOE,
                 ENDIUM_SWORD, ENDIUM_PICKAXE, ENDIUM_SHOVEL, ENDIUM_AXE,
@@ -114,8 +133,14 @@ public class ModItems {
             }
         }
         //block items
-        Item Blocks[] = {STEEL_ORE, STEEL_BLOCK, HANDS_COLD_ORE, HANDS_COLD_BLOCK, ENDIUM_ORE, ENDIUM_BLOCK};
-        String bNames[] = {"steel_ore", "steel_block", "hands_cold_ore", "hands_cold_block", "endium_ore", "endium_block"};
+        Item Blocks[] = {
+                STEEL_ORE, STEEL_BLOCK, RAW_STEEL_BLOCK,
+                HANDS_COLD_ORE, HANDS_COLD_BLOCK, RAW_HANDS_COLD_BLOCK,
+                ENDIUM_ORE, ENDIUM_BLOCK, RAW_ENDIUM_BLOCK};
+        String bNames[] = {
+                "steel_ore", "steel_block", "raw_steel_block",
+                "hands_cold_ore", "hands_cold_block", "raw_hands_cold_block",
+                "endium_ore", "endium_block", "raw_endium_block"};
         if (Blocks.length == bNames.length) {
             for (int o = 0; o < Blocks.length; o += 1) {
                 Registry.register(Registry.ITEM, new Identifier(MOD_ID, bNames[o]), Blocks[o]);

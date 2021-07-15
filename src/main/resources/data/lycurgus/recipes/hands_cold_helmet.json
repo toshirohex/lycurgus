@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#E#"
+  ],
+  "key": {
+    "#": {
+      "item": "lycurgus:hands_cold_ingot"
+    },
+    "E": {
+      "item": "minecraft:iron_helmet"
+    }
+  },
+  "result": {
+    "item": "lycurgus:hands_cold_helmet",
+    "count": 1
+  }
+}

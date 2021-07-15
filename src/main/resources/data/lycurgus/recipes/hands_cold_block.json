@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "lycurgus:hands_cold_ingot"
+    }
+  },
+  "result": {
+    "item": "lycurgus:hands_cold_block",
+    "count": 1
+  }
+}

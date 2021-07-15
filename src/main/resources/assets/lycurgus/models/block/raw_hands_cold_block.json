@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lycurgus:blocks/raw_hands_cold_block"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "lycurgus:steel_helmet"
+  },
+  "addition": {
+    "item": "lycurgus:endium_ingot"
+  },
+  "result": {
+    "item": "lycurgus:endium_helmet"
+  }
+}
