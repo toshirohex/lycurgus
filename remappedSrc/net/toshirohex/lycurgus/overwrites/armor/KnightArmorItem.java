@@ -20,24 +20,50 @@ public class KnightArmorItem extends ArmorItem implements IKnightArmor {
         super(material, slot, settings);
     }
 
+    //huge thanks to modmuss and the other techreborn devs for the implementation method.
     @Override
     public void tickArmor(ItemStack stack, PlayerEntity player, World world) {
-        if(!world.isClient){
+        //if(!world.isClient){
             if (player.getEquippedStack(EquipmentSlot.CHEST).equals(ModArmors.KNIGHT[1])) {
                 if (!FLIGHT_CHARM.grants(player, VanillaAbilities.ALLOW_FLYING)) {
                     FLIGHT_CHARM.grantTo(player, VanillaAbilities.ALLOW_FLYING);
                 }
             }
-        }
+        //}
+//        switch (this.slot) {
+//            case HEAD:
+//                break;
+//            case CHEST:
+//                if(!FLIGHT_CHARM.grants(player, VanillaAbilities.ALLOW_FLYING))
+//                    FLIGHT_CHARM.grantTo(player, VanillaAbilities.ALLOW_FLYING);
+//                break;
+//            case LEGS:
+//                break;
+//            case FEET:
+//                break;
+//        }
 
     }
 
+    //again huge thanks to modmuss and the other techreborn devs.
     @Override
     public void onRemoved(PlayerEntity player){
-            if (player.getEquippedStack(EquipmentSlot.CHEST).equals(ModArmors.KNIGHT[1])) {
-                if (FLIGHT_CHARM.grants(player, VanillaAbilities.ALLOW_FLYING)) {
-                    FLIGHT_CHARM.revokeFrom(player, VanillaAbilities.ALLOW_FLYING);
-                }
+        if(!player.getEquippedStack(EquipmentSlot.CHEST).equals(ModArmors.KNIGHT[1])){
+            if(FLIGHT_CHARM.grants(player, VanillaAbilities.ALLOW_FLYING)){
+                FLIGHT_CHARM.revokeFrom(player, VanillaAbilities.ALLOW_FLYING);
             }
+        }
+//        switch (this.slot){
+//            case HEAD:
+//                break;
+//            case CHEST:
+//                if(FLIGHT_CHARM.grants(player, VanillaAbilities.ALLOW_FLYING))
+//                    FLIGHT_CHARM.revokeFrom(player, VanillaAbilities.ALLOW_FLYING);
+//                break;
+//            case LEGS:
+//                break;
+//            case FEET:
+//                break;
+//        }
     }
 }

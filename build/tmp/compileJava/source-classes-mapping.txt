@@ -2,6 +2,8 @@ net/toshirohex/lycurgus/registry/ModBlocks.java
  net.toshirohex.lycurgus.registry.ModBlocks
 net/toshirohex/lycurgus/overwrites/items/Toe.java
  net.toshirohex.lycurgus.overwrites.items.Toe
+net/toshirohex/lycurgus/overwrites/tools/KingCotton.java
+ net.toshirohex.lycurgus.overwrites.tools.KingCotton
 net/toshirohex/lycurgus/overwrites/tools/Hoe.java
  net.toshirohex.lycurgus.overwrites.tools.Hoe
 net/toshirohex/lycurgus/overwrites/tools/Axe.java
@@ -16,6 +18,10 @@ net/toshirohex/lycurgus/overwrites/entities/PlayerEntity.java
  net.toshirohex.lycurgus.overwrites.entities.PlayerEntity
 net/toshirohex/lycurgus/materials/ModFoodComponents.java
  net.toshirohex.lycurgus.materials.ModFoodComponents
+net/toshirohex/lycurgus/interfaces/KingCotton.java
+ net.toshirohex.lycurgus.interfaces.KingCotton
+net/toshirohex/lycurgus/interfaces/Hoe.java
+ net.toshirohex.lycurgus.interfaces.Hoe
 net/toshirohex/lycurgus/mixin/ExampleMixin.java
  net.toshirohex.lycurgus.mixin.ExampleMixin
 net/toshirohex/lycurgus/materials/ModArmorMaterials.java
@@ -24,9 +30,12 @@ net/toshirohex/lycurgus/registry/ModItems.java
  net.toshirohex.lycurgus.registry.ModItems
 net/toshirohex/lycurgus/overwrites/armor/KnightArmorItem.java
  net.toshirohex.lycurgus.overwrites.armor.KnightArmorItem
+ net.toshirohex.lycurgus.overwrites.armor.KnightArmorItem$1
 net/toshirohex/lycurgus/materials/ModToolMaterials.java
  net.toshirohex.lycurgus.materials.ModToolMaterials
 net/toshirohex/lycurgus/overwrites/tools/Pickaxe.java
  net.toshirohex.lycurgus.overwrites.tools.Pickaxe
+net/toshirohex/lycurgus/registry/ModAbilities.java
+ net.toshirohex.lycurgus.registry.ModAbilities
 net/toshirohex/lycurgus/registry/ModArmors.java
  net.toshirohex.lycurgus.registry.ModArmors
