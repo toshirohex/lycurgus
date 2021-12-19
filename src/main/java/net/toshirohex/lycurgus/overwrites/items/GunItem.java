@@ -9,6 +9,7 @@ import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.SnowballItem;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
@@ -27,7 +28,7 @@ public class GunItem extends Item{
         if (!world.isClient) {
                 SnowballEntity bullet = new SnowballEntity(world, user);
                 bullet.setItem(new ItemStack(Items.COBBLESTONE));
-                bullet.setProperties(user, user.getPitch(), user.headYaw, 0.0F, 1.5F, 1.0F);
+                bullet.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
                 world.spawnEntity(bullet);
         }
 

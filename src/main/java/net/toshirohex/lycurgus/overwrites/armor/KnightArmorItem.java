@@ -1,8 +1,6 @@
 package net.toshirohex.lycurgus.overwrites.armor;
 
-import io.github.ladysnake.pal.AbilitySource;
-import io.github.ladysnake.pal.Pal;
-import io.github.ladysnake.pal.VanillaAbilities;
+
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
@@ -14,7 +12,6 @@ import net.toshirohex.lycurgus.registry.ModArmors;
 import net.toshirohex.lycurgus.registry.ModItems;
 
 public class KnightArmorItem extends ArmorItem implements IKnightArmor {
-    public static final AbilitySource FLIGHT_CHARM = Pal.getAbilitySource("lycurgus", "flight_charm");
 
     public KnightArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
@@ -24,9 +21,6 @@ public class KnightArmorItem extends ArmorItem implements IKnightArmor {
     public void tickArmor(ItemStack stack, PlayerEntity player, World world) {
         if(!world.isClient){
             if (player.getEquippedStack(EquipmentSlot.CHEST).equals(ModArmors.KNIGHT[1])) {
-                if (!FLIGHT_CHARM.grants(player, VanillaAbilities.ALLOW_FLYING)) {
-                    FLIGHT_CHARM.grantTo(player, VanillaAbilities.ALLOW_FLYING);
-                }
             }
         }
 
@@ -35,9 +29,6 @@ public class KnightArmorItem extends ArmorItem implements IKnightArmor {
     @Override
     public void onRemoved(PlayerEntity player){
             if (player.getEquippedStack(EquipmentSlot.CHEST).equals(ModArmors.KNIGHT[1])) {
-                if (FLIGHT_CHARM.grants(player, VanillaAbilities.ALLOW_FLYING)) {
-                    FLIGHT_CHARM.revokeFrom(player, VanillaAbilities.ALLOW_FLYING);
-                }
             }
     }
 }

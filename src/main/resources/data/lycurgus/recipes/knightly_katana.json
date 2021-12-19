@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#&#",
+    "#@#",
+    "$!$"
+  ],
+  "key": {
+    "#": {
+      "item": "lycurgus:endium_ingot"
+    },
+    "$": {
+      "item": "lycurgus:steel_sword"
+    },
+    "@": {
+      "item": "minecraft:nether_star"
+    },
+    "&": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "!": {
+      "item": "lycurgus:endium_sword"
+    }
+
+  },
+  "result": {
+    "item": "lycurgus:knightly_katana",
+    "count": 1
+  }
+}
